@@ -29,9 +29,8 @@ int mask_request_validate(unsigned char mask_buf[]);
 void diag_clear_reg(int);
 int chk_apps_only(void);
 void diag_send_event_mask_update(smd_channel_t *, int num_bytes);
-void diag_send_msg_mask_update(smd_channel_t *, int ssid_first,
-					 int ssid_last, int proc);
-void diag_send_log_mask_update(smd_channel_t *, int);
+void diag_send_msg_mask_update(smd_channel_t *);
+void diag_send_log_mask_update(smd_channel_t *);
 /* State for diag forwarding */
 #ifdef CONFIG_DIAG_OVER_USB
 int diagfwd_connect(void);
